@@ -1,17 +1,17 @@
-<html><head>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="http://www.youtube.com/player_api"></script>
-
-<style>
-    .songList {
-        width:330px;
-        height:500px;
-    }
-</style>
-</head>
-<body onload="init();">
-
-<textarea class="songList" id="songList">
+<!-- Code guidline: K.I.S.S. -->
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="http://www.youtube.com/player_api"></script>
+        <style>
+            .songList {
+                width:350px;
+                height:500px;
+            }
+        </style>
+    </head>
+    <body>
+        <textarea class="songList" id="songList">
 https://www.youtube.com/watch?v=JkR7zClEkAo
 https://www.youtube.com/watch?v=VNW9TAwImBY
 https://www.youtube.com/watch?v=QSkvyG3H_KM
@@ -55,175 +55,114 @@ https://www.youtube.com/watch?v=RLNuEe-biJQ
 https://www.youtube.com/watch?v=nidFjWK8rik
 https://www.youtube.com/watch?v=-9OOsKVcmyE
 https://www.youtube.com/watch?v=3cBk9jx6e1Y
-https://www.youtube.com/watch?v=_pU0X7ZOfHs
-https://www.youtube.com/watch?v=AW1zrt_cyF8
-https://www.youtube.com/watch?v=K8gYcdFts00
-https://www.youtube.com/watch?v=8tSfgO3AbwE
-https://www.youtube.com/watch?v=xm-Bj79VKRg
-https://www.youtube.com/watch?v=2T6Le21bzBU
-https://www.youtube.com/watch?v=Ze_oexe6v3k
-https://www.youtube.com/watch?v=w6p8s2UUzS8
-https://www.youtube.com/watch?v=8M7pL6ucR9A
-https://www.youtube.com/watch?v=fcrLBc1A4Hg
-https://www.youtube.com/watch?v=xayre9UUY-g
-https://www.youtube.com/watch?v=X1pLtD9h8Gw
-https://www.youtube.com/watch?v=C5C-g2aZDTg
-https://www.youtube.com/watch?v=6zZtUybqUZY
-https://www.youtube.com/watch?v=XFFoi_ghkeU
-https://www.youtube.com/watch?v=LS6PfoPIgns
-https://www.youtube.com/watch?v=_pzIScxsyIk
-https://www.youtube.com/watch?v=EuVjHD5iYaQ
-https://www.youtube.com/watch?v=CEtNpEGaPoY
-https://www.youtube.com/watch?v=AWFxrS6qQSI
-https://www.youtube.com/watch?v=nAZNr1_ov2s
-https://www.youtube.com/watch?v=gGOkKvm9OPs
-https://www.youtube.com/watch?v=KhreN5xyjkA
-https://www.youtube.com/watch?v=2zyqCYHZkws
-https://www.youtube.com/watch?v=fpw3aGRg0YM
-https://www.youtube.com/watch?v=bjxK0GQeA-c
-https://www.youtube.com/watch?v=55ZgOnpMlnQ
-https://www.youtube.com/watch?v=nJWYLgOubhw
-https://www.youtube.com/watch?v=zXyTSPgHPcQ
-https://www.youtube.com/watch?v=3UXSH-8V0zA
-https://www.youtube.com/watch?v=uJdl9M7nKxc
-https://www.youtube.com/watch?v=U-Dl5HoyKZ0
-https://www.youtube.com/watch?v=DN6GSi69uV4
-https://www.youtube.com/watch?v=8FKL8L0GYIY
-https://www.youtube.com/watch?v=0gt-mK_ZV0o
-https://www.youtube.com/watch?v=IpU5owQdVj8
-https://www.youtube.com/watch?v=aC7eegwbDwE
-https://www.youtube.com/watch?v=F0ZknElGdlw
-https://www.youtube.com/watch?v=KCm0bct-Bek
-https://www.youtube.com/watch?v=bB9XBqasae8
-https://www.youtube.com/watch?v=j8AKZEY5rls
-https://www.youtube.com/watch?v=RRq0Zu_lYh4
-https://www.youtube.com/watch?v=xB3Ut3IGqcM
-https://www.youtube.com/watch?v=_pOrlpuMtW8
-https://www.youtube.com/watch?v=OyKj4gJ_Sl0
-https://www.youtube.com/watch?v=SXUu7vnjSe8
-https://www.youtube.com/watch?v=nMQZGF6HI3U
-https://www.youtube.com/watch?v=7JGWYhELgv4
-https://www.youtube.com/watch?v=snjrSlG26O0
-https://www.youtube.com/watch?v=5oJs6nmWl1Y
-https://www.youtube.com/watch?v=x5Nt1MLz9hU
-https://www.youtube.com/watch?v=-q_abn6-tzk
-https://www.youtube.com/watch?v=wYQOvLVhjcg
-https://www.youtube.com/watch?v=On3IaKLaoUw
-https://www.youtube.com/watch?v=QLXiM8514x0
-https://www.youtube.com/watch?v=PW-8JJEh04s
-https://www.youtube.com/watch?v=us4IsTmBo48
-https://www.youtube.com/watch?v=lHQ8Xbr0nIA
-https://www.youtube.com/watch?v=ZoXMMLQkM6s
-https://www.youtube.com/watch?v=eE8M1-SAYCU
-https://www.youtube.com/watch?v=mA3G6tSO-ik
-https://www.youtube.com/watch?v=QIjFpDxCezc
-https://www.youtube.com/watch?v=xhNjuv7aGEo
-https://www.youtube.com/watch?v=eDgOdetSu-c
-https://www.youtube.com/watch?v=94X1RqgFTuM
-https://www.youtube.com/watch?v=c2aC_KzOTyA
-https://www.youtube.com/watch?v=QjUT86N7ffU
-https://www.youtube.com/watch?v=B4WYXYih9b4
-https://www.youtube.com/watch?v=VsIH_DXemmc
-https://www.youtube.com/watch?v=IESU66ZuQ_A
-https://www.youtube.com/watch?v=SSc7Q6ew7tE
-https://www.youtube.com/watch?v=iZKh9AAfcdM
-https://www.youtube.com/watch?v=pbUp5FZ2pFY
-https://www.youtube.com/watch?v=Xxsi-YbbavA
-https://www.youtube.com/watch?v=2EoiLZ_Xbb0
-https://www.youtube.com/watch?v=rTvZ8e78jSE
-https://www.youtube.com/watch?v=jFLbiJI63ko
-</textarea>
-<div>
-<button onclick="start();">Start</button>
-</div>
-<div>
-<div id="player1"></div>
-</div>
-<div>
-<div id="player2"></div>
-</div>
-<script>
-var init = function() {
-	
-}
+        </textarea>
+        <div>
+            <button onclick="start();">Start</button>
+            <button onclick="mute();">Mute/Unmute</button>
+        </div>
+        <div>
+            <div id="player1"></div>
+        </div>
+        <div>
+        <div id="player2"></div>
+        </div>
+    <script>
 
-var songIndex = 0;
-var songList = [];
-var playerIndex = 1;
-var refreshSongList = function() {
-    songList = [];
-    $.each($('#songList').val().split(/\n/), function(i, line){
-        if(line){
-            songList.push(line);
-        }
-    });
-};
-var start = function() {
-    songIndex = 0;
-    
-    playNext();
-}
+        //The current song
+        var songIndex = 0;
+        //All songs
+        var songList = [];
+        //The next available player
+        var playerIndex = 1;
+        //All players
+        var players = [];
+        //Mute flag
+        var isMute = false;
 
-var onPlayerStateChange = function() {
-
-}
-
-var loop = function() {
-    if(songList.length <= songIndex) songIndex = 0;
-}
-
-var playNext = function() {
-    refreshSongList();
-    loop();
-    if(songList.length <= songIndex) return;
-    loadPlayer(songList[songIndex++].split("?v=")[1]);
-}
-
-var volumeFadeTo = function(player, times) {
-    var index = players.indexOf(player);
-    var to = index;//player;
-    var from = index == 2 ? 1 : 2;
-
-    if(times > 0)
-    setTimeout(function() {
-        volumeFadeTo(player, times-1)
-    }, 1000);
-
-    if(players[to] !== undefined) 
-    players[to].setVolume(players[to].getVolume() + 10);
-    if(players[from] !== undefined)
-    players[from].setVolume(players[from].getVolume() - 10);
-
-}
-
-var onPlayerReady = function(event) {
-    event.target.setVolume(0);
-    event.target.playVideo();
-    volumeFadeTo(event.target, 10);
-    console.log(event.target.getDuration());
-    setTimeout(playNext, event.target.getDuration() * 1000 - 10000);
-    //setTimeout(playNext, 25000);
-}
-
-var players = [];
-
-var loadPlayer = function(id) {
-    if(playerIndex > 2) playerIndex = 1;
-    if(typeof players[playerIndex] !== 'undefined') players[playerIndex].destroy();
-    
-    players[playerIndex] = new YT.Player('player' + playerIndex, {
-              width: '500',
-              height: '500',
-              videoId: id,
-              events: {
-                onReady: onPlayerReady,
-              //  onStateChange: onPlayerStateChange
-              }
+        //Parses text box into array of urls 
+        var refreshSongList = function() {
+            songList = [];
+            $.each($('#songList').val().split(/\n/), function(i, line){
+                if(line){
+                    songList.push(line);
+                }
             });
-    
-    playerIndex++;
-}
+        };
 
-</script>
-</body>
+        //Resets the player
+        var start = function() {
+            songIndex = 0;
+            
+            playNext();
+        }
+
+        //Resets track position on end
+        var loop = function() {
+            if(songList.length <= songIndex) songIndex = 0;
+        }
+
+        //Loads the next song 
+        var playNext = function() {
+            refreshSongList();
+            loop();
+            if(songList.length <= songIndex) return;
+            loadPlayer(songList[songIndex++].split("?v=")[1]);
+        }
+
+        //Changes the volume of the players smoothly
+        var volumeFadeTo = function(player, times) {
+            var index = players.indexOf(player);
+            var to = index;//player;
+            var from = index == 2 ? 1 : 2;
+
+            if(times > 0)
+            setTimeout(function() {
+                volumeFadeTo(player, times-1)
+            }, 1000);
+
+            if(isMute) return;
+            if(players[to] !== undefined) 
+                players[to].setVolume(players[to].getVolume() + 10);
+            if(players[from] !== undefined)
+                players[from].setVolume(players[from].getVolume() - 10);
+
+        }
+
+        //Plays the song and sets a timer to load the next one
+        var onPlayerReady = function(event) {
+            event.target.setVolume(0);
+            event.target.playVideo();
+            volumeFadeTo(event.target, 10);
+            setTimeout(playNext, event.target.getDuration() * 1000 - 10000);
+        }
+
+        //Creates a youtube player by next available player and
+        //loads the video by given id
+        var loadPlayer = function(id) {
+            if(playerIndex > 2) playerIndex = 1;
+            if(typeof players[playerIndex] !== 'undefined') players[playerIndex].destroy();
+            
+            players[playerIndex] = new YT.Player('player' + playerIndex, {
+                    width: '500',
+                    height: '500',
+                    videoId: id,
+                    events: {
+                        onReady: onPlayerReady,
+                    }
+                    });
+            
+            playerIndex++;
+        }
+
+        var mute = function() {
+            isMute = !isMute;
+            var volume = isMute ? 0 : 100;
+            if(players[1] !== undefined)
+                players[1].setVolume(volume);
+            if(players[2] !== undefined)
+                players[2].setVolume(volume);
+        }
+
+        </script>
+    </body>
 </html>
