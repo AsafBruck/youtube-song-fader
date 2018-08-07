@@ -1,0 +1,111 @@
+<html><head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="http://www.youtube.com/player_api"></script>
+
+<style>
+    .songList {
+        width:330px;
+        height:500px;
+    }
+</style>
+</head>
+<body onload="init();">
+
+<textarea class="songList" id="songList">
+https://www.youtube.com/watch?v=8lPfjpd28Uo
+https://www.youtube.com/watch?v=sTI9_R2Tjxk
+    
+</textarea>
+<div>
+<button onclick="start();">Start</button>
+</div>
+<div>
+<div id="player1"></div>
+</div>
+<div>
+<div id="player2"></div>
+</div>
+<script>
+var init = function() {
+	
+}
+
+var songIndex = 0;
+var songList = [];
+var playerIndex = 1;
+var refreshSongList = function() {
+    songList = [];
+    $.each($('#songList').val().split(/\n/), function(i, line){
+        if(line){
+            songList.push(line);
+        }
+    });
+};
+var start = function() {
+    songIndex = 0;
+    
+    playNext();
+}
+
+var onPlayerStateChange = function() {
+
+}
+
+var loop = function() {
+    if(songList.length <= songIndex) songIndex = 0;
+}
+
+var playNext = function() {
+    refreshSongList();
+    loop();
+    if(songList.length <= songIndex) return;
+    loadPlayer(songList[songIndex++].split("?v=")[1]);
+}
+
+var volumeFadeTo = function(player, times) {
+    var index = players.indexOf(player);
+    var to = index;//player;
+    var from = index == 2 ? 1 : 2;
+
+    if(times > 0)
+    setTimeout(function() {
+        volumeFadeTo(player, times-1)
+    }, 1000);
+
+    if(players[to] !== undefined) 
+    players[to].setVolume(players[to].getVolume() + 10);
+    if(players[from] !== undefined)
+    players[from].setVolume(players[from].getVolume() - 10);
+
+}
+
+var onPlayerReady = function(event) {
+    event.target.setVolume(0);
+    event.target.playVideo();
+    volumeFadeTo(event.target, 10);
+    setTimeout(playNext, event.target.getDuration() * 1000 - 10000);
+    //setTimeout(playNext, 25000);
+}
+
+var players = [];
+
+var loadPlayer = function(id) {
+    if(playerIndex > 2) playerIndex = 1;
+    if(typeof players[playerIndex] !== 'undefined') players[playerIndex].destroy();
+    
+    players[playerIndex] = new YT.Player('player' + playerIndex, {
+              width: '500',
+              height: '500',
+              videoId: id,
+              events: {
+                onReady: onPlayerReady,
+              //  onStateChange: onPlayerStateChange
+              }
+            });
+    
+    playerIndex++;
+}
+
+</script>
+</body>
+</html>
