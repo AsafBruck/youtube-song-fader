@@ -9,4 +9,7 @@ Compile a list of songs you would like to listen to<br />
 Press the "Start" button<br />
 The app will play the songs and transition between them:<br />
    1. 10 seconds before each song ending the next song will be loaded up<br />
-   2. 10 seconds before each song its volume will slowly fade out<br />
+   2. 10 seconds before each song ending its volume will slowly fade out<br />
+<br />
+
+*Tab must be opened and stayed focus for it to work properly.
